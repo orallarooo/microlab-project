@@ -7,12 +7,33 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "app/*": [
+        "./src/app/*"
+      ],
+      "pages/*": [
+        "./src/pages/*"
+      ],
+      "widgets/*": [
+        "./src/widgets/*"
+      ],
+      "features/*": [
+        "./src/features/*"
+      ],
+      "entities/*": [
+        "./src/entities/*"
+      ],
+      "shared/*": [
+        "./src/shared/*"
+      ]
+    },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
- },
- "ts-node": {
+  },
+  "ts-node": {
     "compilerOptions": {
-        "module": "commonjs"
+      "module": "commonjs"
     }
- }
+  }
 }
