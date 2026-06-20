@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^14.18.63",
     "@types/react": "^17.0.39",
@@ -21,6 +22,7 @@
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
     "babel-loader": "^10.1.1",
+    "babel-plugin-i18next-extract": "^1.1.0",
     "css-loader": "^6.11.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
