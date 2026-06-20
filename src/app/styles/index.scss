@@ -1,19 +1,16 @@
-@use 'variables/global.scss';
-@use  'reset.scss';
-@use  'themes/dark.scss';
-@use  'themes/normal.scss';
+@use 'variables/global';
+@use  'reset';
+@use  'themes/dark';
+@use  'themes/normal';
 
 
 .app {
     display: flex;
-    flex-direction: column;
-    
-    font: var(--font-m);
-
-    background: var(--bg-color);
-    color: var(--primary-color); 
-
+    flex-direction: column; 
     min-height: 100vh;
+    font: var(--font-m);
+    color: var(--primary-color);
+    background: var(--bg-color);
 }
 
 .content-page {
