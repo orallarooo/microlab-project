@@ -13,7 +13,7 @@ export const BugButton = () => {
         if (error) {
             throw new Error();
         }
-    }, [error]); 
+    }, [error]);
 
     return (
         <Button
