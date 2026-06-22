@@ -30,7 +30,9 @@
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["jest"]
+    "types": [
+      "jest"
+    ]
   },
   "ts-node": {
     "compilerOptions": {

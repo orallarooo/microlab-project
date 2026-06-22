@@ -4,6 +4,12 @@
  */
 
 import type { Config } from 'jest';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Emulate CommonJS __dirname in ESM module scope
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -23,7 +29,8 @@ const config: Config = {
   ],
 
   moduleDirectories: [
-    "node_modules"
+    "node_modules",
+    "<rootDir>/src"
   ],
 
   moduleFileExtensions: [
@@ -45,7 +52,15 @@ const config: Config = {
   ],
 
   rootDir: '../../',
+  setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
+  transform: {
+    '^.+\\.(ts|tsx)$': 'babel-jest',
+  },
 
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+  },
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
