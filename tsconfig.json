@@ -6,8 +6,10 @@
     "target": "es6",
     "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "bundler",
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "app/*": [
         "./src/app/*"

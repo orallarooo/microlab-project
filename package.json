@@ -12,8 +12,8 @@
     "stylelint": "stylelint \"src/**/*.scss\"",
     "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
     "unit": "jest --config ./config/jest/jest.config.ts",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006 -c ./config/storybook",
+    "build-storybook": "storybook build -c ./config/storybook"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +24,8 @@
     "@babel/preset-react": "^8.0.1",
     "@babel/preset-typescript": "^7.29.7",
     "@storybook/addon-webpack5-compiler-swc": "^4.0.3",
-    "@storybook/react-webpack5": "^10.4.6",
+    "@storybook/react": "^8.6.18",
+    "@storybook/react-webpack5": "^8.6.18",
     "@svgr/webpack": "^8.1.0",
     "@testing-library/dom": "^9.3.4",
     "@testing-library/jest-dom": "^6.9.1",
@@ -52,10 +53,11 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
+    "loki": "^0.35.1",
     "mini-css-extract-plugin": "^2.10.2",
     "sass": "^1.100.0",
     "sass-loader": "^17.0.0",
-    "storybook": "^10.4.6",
+    "storybook": "^8.6.18",
     "style-loader": "^4.0.0",
     "stylelint": "^17.13.0",
     "stylelint-config-recess-order": "^7.7.0",
@@ -78,5 +80,21 @@
     "react-dom": "^17.0.2",
     "react-i18next": "^17.0.8",
     "react-router-dom": "^6.30.4"
+  },
+  "loki": {
+    "storybookConfigDir": "config/storybook",
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }

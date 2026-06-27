@@ -1,0 +1,23 @@
+import React from 'react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
+import MainPage from './MainPage';
+
+const meta: Meta<typeof MainPage> = {
+    title: 'pages/MainPage',
+    component: MainPage,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+};
+
+export default meta;
+
+type Story = StoryObj<typeof MainPage>;
+
+export const Normal: Story = {};
+
+export const Dark: Story = {
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
